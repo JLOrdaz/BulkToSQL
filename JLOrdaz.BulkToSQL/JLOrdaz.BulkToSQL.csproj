@@ -9,10 +9,12 @@
     <Authors>Jose Luis Ordaz</Authors>
     <Company>Jose Luis Ordaz</Company>
     <Product>JLOrdaz.BulkToSQL</Product>
-    <PackageTags>Bulk Insert, SQL Server, Datatable To Table</PackageTags>
+    <PackageTags>Bulk Insert, SQL Server, Datatable To Table, JLOrdaz</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Description>This tools help to bulk insert data from list to table on SQL Server</Description>
     <PackageIcon>BulkInsertIcon.png</PackageIcon>
+    <RepositoryUrl>https://github.com/JLOrdaz/BulkToSQL</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
