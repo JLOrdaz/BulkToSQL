@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JLOrdaz.BulkToSQL", "JLOrdaz.BulkToSQL\JLOrdaz.BulkToSQL.csproj", "{221CAFDF-B642-4300-AC13-1810BED792AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{221CAFDF-B642-4300-AC13-1810BED792AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{221CAFDF-B642-4300-AC13-1810BED792AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{221CAFDF-B642-4300-AC13-1810BED792AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{221CAFDF-B642-4300-AC13-1810BED792AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {825024BA-DD28-40E3-90FC-52423B1786BD}
+	EndGlobalSection
+EndGlobal
