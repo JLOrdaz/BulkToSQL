@@ -9,6 +9,6 @@ namespace JLOrdaz.BulkToSQL
 
         SqlConnection SQLConex { get; set; }
 
-        void PutDataIntoDB(IList<T> data, string tableDestination);
+        void PutDataIntoDB(IList<T> data, string tableDestination, int timeout);
     }
 }  

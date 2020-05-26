@@ -18,8 +18,19 @@ namespace JLOrdaz.BulkToSQL
             Mapping = mapeos;
         }
 
-        public void PutDataIntoDB(IList<T> data, string tableDestination)
+        public void PutDataIntoDB(IList<T> data, string tableDestination, int timeout = 120)
         {
+
+            if (Mapping is null)
+            {
+                throw new Exception("Mapping is null");
+            }
+
+            if (SQLConex is null)
+            {
+                throw new Exception("SQLConex is null");
+            }
+
             DataTable dt = data.ToDataTable<T>();
 
             if (SQLConex.State != ConnectionState.Open)
@@ -28,7 +39,7 @@ namespace JLOrdaz.BulkToSQL
             using (SqlBulkCopy bulkCopy = new SqlBulkCopy(SQLConex))
             {
                 bulkCopy.DestinationTableName = tableDestination;
-                bulkCopy.BulkCopyTimeout = 120;
+                bulkCopy.BulkCopyTimeout = timeout;
 
                 for (int i = 0; i < Mapping.Count; i++)
                 {
