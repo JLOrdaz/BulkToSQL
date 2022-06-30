@@ -1,11 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.1.1</Version>
-    <LangVersion>latest</LangVersion>
-    <Copyright>© 2020 Jose Luis Ordaz</Copyright>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>enable</Nullable>
+	<Version>1.2</Version>
+    <Copyright>© 2022 Jose Luis Ordaz</Copyright>
     <Authors>Jose Luis Ordaz</Authors>
     <Company>Jose Luis Ordaz</Company>
     <Product>JLOrdaz.BulkToSQL</Product>
@@ -15,8 +16,8 @@
     <PackageIcon>BulkInsertIcon.png</PackageIcon>
     <RepositoryUrl>https://github.com/JLOrdaz/BulkToSQL</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <AssemblyVersion>1.1.1.0</AssemblyVersion>
-    <FileVersion>1.1.1.0</FileVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
   </ItemGroup>
 
   <ItemGroup>
