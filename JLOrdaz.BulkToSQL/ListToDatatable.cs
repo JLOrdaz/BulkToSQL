@@ -6,9 +6,9 @@ using System.Text;
 
 namespace JLOrdaz.BulkToSQL
 {
-    public static class ListToDatatable
+    internal static class ListToDatatable
     {
-        public static DataTable ToDataTable<T>(this IEnumerable<T> data)
+        internal static DataTable ToDataTable<T>(this IEnumerable<T> data)
         {
             PropertyDescriptorCollection properties = TypeDescriptor.GetProperties(typeof(T));
             DataTable table = new DataTable();
