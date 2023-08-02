@@ -70,7 +70,7 @@ namespace JLOrdaz.BulkToSQL
                     }
                 }
 
-                using (SqlBulkCopy bulkCopy = new SqlBulkCopy(SQLConex))
+                using (SqlBulkCopy bulkCopy = new SqlBulkCopy(SQLConex, SqlBulkCopyOptions.FireTriggers, null))
                 {
                     bulkCopy.DestinationTableName = tableDestination;
                     bulkCopy.BulkCopyTimeout = timeout;
@@ -107,7 +107,7 @@ namespace JLOrdaz.BulkToSQL
                     }
                 }
 
-                using (SqlBulkCopy bulkCopy = new SqlBulkCopy(SQLConex))
+                using (SqlBulkCopy bulkCopy = new SqlBulkCopy(SQLConex, SqlBulkCopyOptions.FireTriggers, null))
                 {
                     bulkCopy.DestinationTableName = tableDestination;
                     bulkCopy.BulkCopyTimeout = timeout;
