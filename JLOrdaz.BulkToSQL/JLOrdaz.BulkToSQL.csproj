@@ -5,27 +5,32 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<Version>1.5</Version>
-		<Copyright>© 2022 Jose Luis Ordaz</Copyright>
+		<PackageVersion>1.5.1</PackageVersion>
+		<Copyright>© 2024 Jose Luis Ordaz</Copyright>
 		<Authors>Jose Luis Ordaz</Authors>
 		<Company>Jose Luis Ordaz</Company>
 		<Product>JLOrdaz.BulkToSQL</Product>
+		<PackageId>JLOrdaz.BulkToSQL</PackageId>
 		<PackageTags>Bulk Insert, SQL Server, Datatable To Table, JLOrdaz</PackageTags>
-		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<Description>This tools help to bulk insert data from list to table on SQL Server</Description>
 		<PackageIcon>BulkInsertIcon.png</PackageIcon>
 		<RepositoryUrl>https://github.com/JLOrdaz/BulkToSQL</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
-		<AssemblyVersion>1.5.0.0</AssemblyVersion>
-		<FileVersion>1.5.0.0</FileVersion>
+		<AssemblyVersion>1.5.1</AssemblyVersion>
+		<FileVersion>1.5.1</FileVersion>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>		
 	</PropertyGroup>
 
 	<ItemGroup>
+		<None Include="..\..\JLOrdaz.TelegramBotMessage\LICENSE">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
 		<None Include="LICENSE" Pack="true" PackagePath="" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.0" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
 	</ItemGroup>
 
 	<ItemGroup>

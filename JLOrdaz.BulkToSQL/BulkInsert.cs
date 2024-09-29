@@ -40,8 +40,7 @@ namespace JLOrdaz.BulkToSQL
                 SQLConex.Open();
         }
 
-
-        private void LimpiarTablaTemporal(string tabla)
+        public void LimpiarTablaTemporal(string tabla)
         {
             using (SqlCommand cmd = SQLConex.CreateCommand())
             {
