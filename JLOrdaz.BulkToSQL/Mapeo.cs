@@ -20,5 +20,12 @@ namespace JLOrdaz.BulkToSQL
             Origen = origen;
             Destino = destino;
         }
+
+        public Mapeo(string origenIgualdestino)
+        {
+            Origen = origenIgualdestino;
+            Destino = origenIgualdestino;
+        }
+
     }
 }
