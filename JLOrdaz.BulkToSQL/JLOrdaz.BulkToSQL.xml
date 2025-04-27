@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JLOrdaz.BulkToSQL</name>
+    </assembly>
+    <members>
+        <member name="T:JLOrdaz.BulkToSQL.IBulkInsert`1">
+            <summary>
+            Interface for bulk inserting data into a SQL Server database.
+            </summary>
+        </member>
+        <member name="M:JLOrdaz.BulkToSQL.IBulkInsert`1.LimpiarTablaTemporal(System.String)">
+            <summary>
+            Clears the temporary table in the database.
+            </summary>
+            <param name="tabla">The name of the temporary table to clear.</param>
+        </member>
+        <member name="M:JLOrdaz.BulkToSQL.IBulkInsert`1.PutDataIntoDB(System.Collections.Generic.IList{`0},System.String,System.Int32,System.Boolean)">
+            <summary>
+            Inserts a list of data into the specified database table.
+            </summary>
+            <param name="data">The list of data to insert.</param>
+            <param name="tableDestination">The name of the destination table.</param>
+            <param name="timeout">The timeout duration for the operation.</param>
+            <param name="truncateTable">Indicates whether to truncate the table before inserting data.</param>
+        </member>
+        <member name="M:JLOrdaz.BulkToSQL.IBulkInsert`1.PutDataIntoDBAsync(System.Collections.Generic.IList{`0},System.String,System.Int32,System.Boolean)">
+            <summary>
+            Asynchronously inserts a list of data into the specified database table.
+            </summary>
+            <param name="data">The list of data to insert.</param>
+            <param name="tableDestination">The name of the destination table.</param>
+            <param name="timeout">The timeout duration for the operation.</param>
+            <param name="truncateTable">Indicates whether to truncate the table before inserting data.</param>
+            <returns>A task representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:JLOrdaz.BulkToSQL.ListToDatatable.ToDataTable``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Converts a list of objects to a DataTable.
+            </summary>
+            <typeparam name="T">The type of objects in the list.</typeparam>
+            <param name="data">The list of objects to convert.</param>
+            <returns>A DataTable representation of the list.</returns>
+        </member>
+        <member name="T:JLOrdaz.BulkToSQL.Mapeo">
+            <summary>
+            Represents a mapping between an origin and a destination.
+            </summary>
+        </member>
+        <member name="P:JLOrdaz.BulkToSQL.Mapeo.Origen">
+            <summary>
+            Gets or sets the origin value of the mapping.
+            </summary>
+        </member>
+        <member name="P:JLOrdaz.BulkToSQL.Mapeo.Destino">
+            <summary>
+            Gets or sets the destination value of the mapping.
+            </summary>
+        </member>
+        <member name="M:JLOrdaz.BulkToSQL.Mapeo.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:JLOrdaz.BulkToSQL.Mapeo"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:JLOrdaz.BulkToSQL.Mapeo.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:JLOrdaz.BulkToSQL.Mapeo"/> class with specified origin and destination values.
+            </summary>
+            <param name="origen">The origin value.</param>
+            <param name="destino">The destination value.</param>
+        </member>
+        <member name="M:JLOrdaz.BulkToSQL.Mapeo.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:JLOrdaz.BulkToSQL.Mapeo"/> class where the origin and destination are the same.
+            </summary>
+            <param name="origenIgualdestino">The value to be used for both origin and destination.</param>
+        </member>
+    </members>
+</doc>
