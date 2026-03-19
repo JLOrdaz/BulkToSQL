@@ -1,4 +1,3 @@
-﻿using Microsoft.Data.SqlClient;
 using System.Collections.Generic;
 
 namespace JLOrdaz.BulkToSQL

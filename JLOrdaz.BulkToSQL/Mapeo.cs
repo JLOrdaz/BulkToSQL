@@ -1,7 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace JLOrdaz.BulkToSQL
 {
     /// <summary>
@@ -23,9 +19,8 @@ namespace JLOrdaz.BulkToSQL
         /// Initializes a new instance of the <see cref="Mapeo"/> class with default values.
         /// </summary>
         public Mapeo()
+            : this(string.Empty, string.Empty)
         {
-            Origen = string.Empty;
-            Destino = string.Empty;
         }
 
         /// <summary>
@@ -44,9 +39,8 @@ namespace JLOrdaz.BulkToSQL
         /// </summary>
         /// <param name="origenIgualdestino">The value to be used for both origin and destination.</param>
         public Mapeo(string origenIgualdestino)
+            : this(origenIgualdestino, origenIgualdestino)
         {
-            Origen = origenIgualdestino;
-            Destino = origenIgualdestino;
         }
     }
 }

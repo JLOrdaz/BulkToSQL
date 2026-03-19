@@ -4,6 +4,37 @@
         <name>JLOrdaz.BulkToSQL</name>
     </assembly>
     <members>
+        <member name="T:JLOrdaz.BulkToSQL.BulkInsert`1">
+            <summary>
+            Executes bulk inserts against SQL Server using a connection and column mappings.
+            </summary>
+        </member>
+        <member name="P:JLOrdaz.BulkToSQL.BulkInsert`1.Mapping">
+            <summary>
+            Gets or sets the source-to-destination column mappings used by bulk copy.
+            </summary>
+        </member>
+        <member name="P:JLOrdaz.BulkToSQL.BulkInsert`1.SQLConex">
+            <summary>
+            Gets or sets the SQL connection used for bulk insert operations.
+            </summary>
+        </member>
+        <member name="M:JLOrdaz.BulkToSQL.BulkInsert`1.#ctor(Microsoft.Data.SqlClient.SqlConnection,System.Collections.Generic.List{JLOrdaz.BulkToSQL.Mapeo})">
+            <summary>
+            Initializes a new bulk insert helper for the given SQL connection and mappings.
+            </summary>
+            <param name="sqlConex">The openable SQL connection to use.</param>
+            <param name="mapeos">The column mappings for the destination table.</param>
+        </member>
+        <member name="M:JLOrdaz.BulkToSQL.BulkInsert`1.LimpiarTablaTemporal(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:JLOrdaz.BulkToSQL.BulkInsert`1.PutDataIntoDB(System.Collections.Generic.IList{`0},System.String,System.Int32,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:JLOrdaz.BulkToSQL.BulkInsert`1.PutDataIntoDBAsync(System.Collections.Generic.IList{`0},System.String,System.Int32,System.Boolean)">
+            <inheritdoc />
+        </member>
         <member name="T:JLOrdaz.BulkToSQL.IBulkInsert`1">
             <summary>
             Interface for bulk inserting data into a SQL Server database.

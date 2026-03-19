@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Text;
 
 namespace JLOrdaz.BulkToSQL
 {
@@ -16,22 +15,26 @@ namespace JLOrdaz.BulkToSQL
         /// <returns>A DataTable representation of the list.</returns>
         internal static DataTable ToDataTable<T>(this IEnumerable<T> data)
         {
-            // Get the properties of the type T
+            ArgumentNullException.ThrowIfNull(data);
+
             PropertyDescriptorCollection properties = TypeDescriptor.GetProperties(typeof(T));
-            DataTable table = new DataTable();
+            DataTable table = new(typeof(T).Name);
 
-            // Create columns in the DataTable for each property
             foreach (PropertyDescriptor prop in properties)
+            {
                 table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType);
+            }
 
-            // Populate the DataTable with data from the list
             foreach (T item in data)
             {
                 DataRow row = table.NewRow();
                 foreach (PropertyDescriptor prop in properties)
+                {
                     row[prop.Name] = prop.GetValue(item) ?? DBNull.Value;
+                }
                 table.Rows.Add(row);
             }
+
             return table;
         }
     }
